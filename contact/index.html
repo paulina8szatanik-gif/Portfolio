@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Paulina's Portfolio</title>
+  <meta name="description" content="Get in touch with Paulina Szatanik-Wierzynski, Lead Product Designer in Berlin.">
+  <link rel="icon" href="../assets/images/favicon.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <nav class="site-nav" id="hero">
+    <div class="nav-inner">
+      <a class="nav-name" href="../">Paulina S-Wierzynski</a>
+      <div class="nav-links">
+        <a href="../#about">About</a>
+        <a href="../#work">Projects</a>
+        <a href="./">Contact</a>
+      </div>
+      <p class="nav-city">Berlin ✳ <span data-clock>--:--</span></p>
+    </div>
+  </nav>
+
+  <main>
+    <header class="contact-hero">
+      <div class="wrapper">
+        <h1>Contact</h1>
+      </div>
+    </header>
+
+    <div class="wrapper contact-content">
+      <div class="contact-col">
+        <p class="contact-lead">I'm looking forward to hearing from you! If you prefer not to fill out forms, feel free to email me directly and let's talk about the next big thing!</p>
+        <a class="contact-email" href="mailto:paulina8szatanik@gmail.com">paulina8szatanik@gmail.com&nbsp;&nbsp;↑</a>
+
+        <!-- Form submissions are emailed via formsubmit.co. The first message
+             sent from the live site triggers a one-time confirmation email
+             to paulina8szatanik@gmail.com — confirm it once and the form works. -->
+        <form class="contact-form" action="https://formsubmit.co/paulina8szatanik@gmail.com" method="POST">
+          <input type="hidden" name="_subject" content="New portfolio contact">
+          <input type="hidden" name="_captcha" value="false">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="ex. John Smith" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="hello@website.com" required>
+          </div>
+          <div>
+            <label for="details">Share More Details</label>
+            <textarea id="details" name="message" placeholder="Describe what you need..."></textarea>
+          </div>
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-marquee marquee" aria-label="Let's work together">
+      <div class="marquee-track"><span>Let's work together</span></div>
+      <div class="marquee-track" aria-hidden="true"><span>Let's work together</span></div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-social">
+        <a href="https://www.instagram.com/paulina_ux_space/" target="_blank" rel="noopener">Instagram&nbsp;&nbsp;↑</a>
+        <a href="https://www.threads.com/@paulina_ux_space" target="_blank" rel="noopener">Threads&nbsp;&nbsp;↑</a>
+        <a href="https://www.linkedin.com/in/paulina-szatanik-wierzynski" target="_blank" rel="noopener">LinkedIn&nbsp;&nbsp;↑</a>
+      </div>
+      <p class="footer-note">Let me know if you need a product designer. I'd love to talk about the next big thing!</p>
+    </div>
+    <div class="footer-bottom">
+      <a href="mailto:paulina8szatanik@gmail.com?subject=👋">paulina8szatanik@gmail.com</a>
+      <p>© Crafted by Paulina with ☕️</p>
+      <a href="#hero">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

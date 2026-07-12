@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Connect — Paulina's Portfolio</title>
+  <meta name="description" content="Winning SMBs in HVAC/R — product design for Testo's Smart Connect IoT web platform.">
+  <link rel="icon" href="../assets/images/favicon.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <nav class="site-nav" id="hero">
+    <div class="nav-inner">
+      <a class="nav-name" href="../">Paulina S-Wierzynski</a>
+      <div class="nav-links">
+        <a href="../#about">About</a>
+        <a href="../#work">Projects</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <p class="nav-city">Berlin ✳ <span data-clock>--:--</span></p>
+    </div>
+  </nav>
+
+  <main>
+    <header class="case-hero">
+      <div class="wrapper case-hero-inner">
+        <h1>Smart Connect</h1>
+        <p class="case-subtitle">Winning SMBs in HVAC/R</p>
+      </div>
+    </header>
+
+    <div class="case-cover wrapper">
+      <img src="../assets/images/cover-smart-connect.png" alt="Smart Connect dashboard on laptop, tablet and phone with a thermal imager">
+    </div>
+
+    <div class="case-intro wrapper">
+      <div class="case-desc">
+        <p>Every morning, nearly 14,000 HVAC technicians open the Testo Smart App. They measure flue gas emissions, test duct tightness, check oxygen levels — then generate the PDF that proves to their customer the job was done right. That report isn't paperwork. It's their professional reputation. Their customers file it for legal compliance, insurance, and warranty purposes.</p>
+        <p>Testo — a 466M EUR measurement technology company with 3,900 employees — had this audience locked in on mobile. 220,000 monthly active users. 430,000 registered. 13 million messages processed daily. But every interaction lived on the phone. No web experience. No dashboard. No way to review a full day's work from a laptop.</p>
+        <p>The enterprise segment was covered by Saveris, Testo's automated monitoring system. But the SMB segment — the independent technicians and small service companies who make up the backbone of HVAC/R — was underserved. Smart Connect was built to change that: a subscription web platform with paid licensing starting January 2027.</p>
+        <p>This wasn't a product update. It was a new revenue model.</p>
+      </div>
+      <dl class="case-meta">
+        <div class="meta-row"><dt>Company:</dt><dd>Testo SE &amp; Co. KGaA</dd></div>
+        <div class="meta-row"><dt>My Role:</dt><dd>Lead Product Designer</dd></div>
+        <div class="meta-row"><dt>Year:</dt><dd>2025</dd></div>
+        <div class="meta-row"><dt>Service Provided:</dt><dd>Product Design</dd></div>
+      </dl>
+    </div>
+
+    <section class="case-section wrapper">
+      <h2>The city under siege and the dragon appears</h2>
+      <h3 class="case-quote"><strong>Inheriting Chaos Before Launch</strong></h3>
+      <div class="prose">
+        <p>I joined as lead designer few months before launch. The scene I walked into:</p>
+        <p>The previous lead designer had left. A new Product Owner was onboarding at the same time. The team needed direction. Requirements were shifting weekly. Stationary monitoring had been designed, but quality had drifted — QA was flagging bugs caused by design inconsistencies. Portable monitoring was barely scoped; the team had been told to "deliver something quickly" against vague requirements.</p>
+        <p>No core user flows mapped between the Smart App and Smart Connect. Personas existed on paper but weren't used in decisions. The dashboard — the single most important screen after login — didn't exist. And core concepts like "customer" and "measuring place" weren't understood by users (we'd later validate this through research — SUS scores were low).</p>
+        <p>The business risk was immediate: nearly 14,000 daily users were about to be asked to pay for a product that didn't have a coherent experience. Without a web platform that earned its subscription, Testo would lose the SMB segment it was trying to capture.</p>
+        <p>I had no map. I needed to draw one.</p>
+      </div>
+    </section>
+
+    <section class="case-section wrapper">
+      <h2>Understanding the threat</h2>
+      <div class="prose">
+        <p>Rather than inheriting old assumptions, I led a 6-week research sprint with the new PO. We interviewed 15 field technicians and service managers across the SMB spectrum. Three pain points kept surfacing — each one a direct threat to the licensing conversion:</p>
+        <p><strong>Data fragmentation.</strong> Technicians' measurement data was scattered across handheld devices, the Smart App, screenshots, and emails. No single source of truth. Piecing together a day's work meant jumping between instruments, phone screens, and message threads. If the web platform didn't unify this, there was no reason to pay for it.</p>
+        <p><strong>Data trapped on devices.</strong> The Smart App already generated PDF reports on-site — technicians could deliver proof of service before leaving the field. But that data lived only on their phone. No way to access it from a laptop, no way to share it with a team, no way to review it from home. The real value of Smart Connect was the cloud layer: all measurement data synced to one place, securely stored, accessible from anywhere, easy to share.</p>
+        <p><strong>No review workflow.</strong> After a day of field work, there was no way to see what data had synced to the cloud, what was missing, or what needed follow-up. Technicians were flying blind every evening. A dashboard wasn't a nice-to-have — it was table stakes for a paid product.</p>
+        <p>But the deeper discovery reframed the entire scope. The measurement doesn't end when data is recorded — it ends when the customer receives the PDF. The flue gas certificate, the tightness test result, the compliance report.</p>
+        <p>Smart Connect wasn't a data viewer. It was the professional credibility layer for every SMB technician using Testo equipment. Every scoping decision from here on was measured against that insight.</p>
+      </div>
+      <div class="case-media">
+        <img src="../assets/images/sc-journey-map.png" alt="User journey map following an HVAC/R field technician through her day" loading="lazy">
+      </div>
+    </section>
+
+    <section class="case-section wrapper">
+      <h2>Drawing the battle plan</h2>
+      <div class="prose">
+        <p>The product problems were real, but the organizational problems were bigger. Decisions took 3 weeks because stakeholders were misaligned, cross-product touchpoints were undefined, and four product teams were working in silos. I fixed the organization before I fixed the product.</p>
+        <p><strong>Cross-product flow mapping.</strong> I raised the need for shared user flow mapping at the Q1 inception workshop — CPO, POs, PMs, tech leads, and designers across Smart Connect, Smart App, the Licensing Portal, and the enterprise Saveris product. We mapped the "red routes": the core journeys that crossed product boundaries. The organization could see where a field technician's day touched Smart App, Smart Connect, device firmware, and cloud infrastructure simultaneously. This directly influenced the Q2 roadmap.</p>
+        <p><strong>Daily cross-functional syncs.</strong> In a chaotic pre-launch environment, weekly meetings weren't enough. We established dailies with the core team — PO, PM, Design, and Tech Lead — to keep decisions moving and unblock each other fast. Decision time dropped from 3 weeks to days. Instead of relitigating choices in scattered threads, we resolved them face-to-face every morning.</p>
+        <p><strong>Risk/assumption log.</strong> Every design decision was tagged "Known" (validated through research) or "Assumed" (hypothesis to test). This gave PMs and engineers confidence in what to build first and made trade-offs visible to leadership before a single line of code was committed.</p>
+        <p>With the org stabilized, I created a user journey map following "Mehreen" — an HVAC/R field technician — through her entire day. I used Claude Code to scrape and synthesize information we already had scattered across different sources, then vibecoded the journey map itself.</p>
+        <ul>
+          <li><strong>Prepare</strong> — morning, at home or in the van. Smart Connect is the tool. Pain: no unified job view, data everywhere.</li>
+          <li><strong>On-site</strong> — at the customer location before measuring. Smart App takes over. Pain: selecting the right measurement type isn't obvious.</li>
+          <li><strong>Measure</strong> — active measurement, hands full. Still on Smart App. Pain: unclear recording state, average values hard to find.</li>
+          <li><strong>Document and deliver</strong> — still on-site or in the van. Smart App + Smart Connect. Pain: manual documentation equals errors and lost time.</li>
+          <li><strong>Review</strong> — evening, laptop or tablet. Back to Smart Connect. Pain: data stuck on device, nothing visible in cloud.</li>
+        </ul>
+        <p>Beyond the main journey, I mapped six specialized measurement flows in detail — flue gas attestation (a legally required 9-step wizard for French compliance), standalone flue gas with corestream search, gas path checks, duct leakage testing, differential temperature, and oxygen supply air measurement. Each had its own configuration, live measurement state, and output format.</p>
+        <p>This journey map wasn't a design artifact to hang on the wall. It was the prioritization engine. Every feature request was placed against a stage: which pain does it solve? Is the evidence Known or Assumed? What's the business impact on licensing conversion?</p>
+      </div>
+      <div class="case-media">
+        <video src="../assets/video/sc-video-1.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <section class="case-section wrapper">
+      <h2>The Battle</h2>
+      <div class="prose">
+        <p><strong>Composable design modules.</strong> Instead of designing complete flows and waiting for sign-off, I built reusable building blocks: dialog severity patterns, measurement summary components, shutdown confirmations, action bar configurations. When scope changed, we recombined modules without redesigning from scratch. This approach scaled across all six measurement types.</p>
+        <p><strong>Tight validation loops.</strong> Quick usability tests before committing to development. When the first round revealed that users didn't understand the difference between "customer" and "measuring place," we adapted within the sprint — not after launch.</p>
+        <p><strong>Design debt made visible.</strong> I built a tracker where every shortcut was logged with a severity and business impact score. When we shipped something fast, the debt was documented. This prevented the "ship and forget" pattern that had caused the consistency drift I inherited in stationary monitoring. There's still a lot of debt to work through — but now it's visible, prioritized, and part of the conversation instead of hidden.</p>
+        <p><strong>AI as force multiplier.</strong> I use Claude Code with MCP integrations to prototype directly in the frontend codebase alongside engineers — validating design decisions against real component implementations instead of throwing static specs over the wall. Research synthesis runs through Langdock and Lyssn AI for user interview analysis. Design tokens are managed through Supernova.io. This collapses the feedback loop between design intent and shipped product. AI isn't a novelty in my workflow — it's how I move at the speed the project demanded.</p>
+        <p><strong>Rapid A/B testing through AI-assisted coding.</strong> When we needed to validate a new cards layout for the summary view, I used AI-assisted coding to ship a live variant in hours — not sprints. We tested copy, placement, and information hierarchy with real users before committing engineering resources to a full build. This is what AI in the design pipeline actually looks like: not generating mockups, but collapsing the time between hypothesis and validated outcome.</p>
+        <p><a href="https://deep-trick-68010529.figma.site/" target="_blank" rel="noopener">See the live test</a></p>
+        <p><strong>Vibecoding workflow — designing a new way to ship.</strong> The speed of AI-assisted prototyping created a new problem: how do you prevent design drift when designers are shipping code directly? I designed a full vibecoding workflow from scratch. The philosophy: "prototype in production" — small, reversible changes ship to 5% of users behind feature flags to be discussed. The flow runs from PO kick-off through designer-led POC scoping, layout prototyping in Figma or code, a 30-minute pairing session with frontend (fewer misinterpretations than async), MR review with feedback in GitLab (not Slack), internal dogfooding before launch, and a designer QA sign-off gate — no merge without designer approval. I built a POC MR template with a built-in designer QA checklist covering functional, visual, interaction, accessibility, and platform-brand checks. This workflow borrowed from Airbnb, Linear, GitHub, Shopify, and Figma — then adapted for our team's reality. It's now in testing.</p>
+      </div>
+      <div class="case-media">
+        <video src="../assets/video/sc-video-2.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+      <div class="case-media">
+        <img src="../assets/images/sc-dashboard.png" alt="Smart Connect dashboard mockup on a laptop" loading="lazy">
+      </div>
+      <div class="case-media">
+        <img src="../assets/images/sc-measurements.png" alt="Smart Connect measurement screens" loading="lazy">
+      </div>
+      <div class="case-media">
+        <video src="../assets/video/sc-video-3.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+      <div class="case-media">
+        <video src="../assets/video/sc-video-4.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <section class="case-section wrapper">
+      <h2>The city rebuilt</h2>
+      <div class="prose">
+        <p><strong>Process:</strong></p>
+        <ul>
+          <li>Decision cycle time: 3 weeks down to 1 week</li>
+          <li>First cross-functional design critique in the team's history — PM, Engineering, Design reviewing together weekly</li>
+          <li>Every feature pressure-tested through a Known vs. Assumed framework before development</li>
+          <li>Cross-product flow mapping adopted at the organizational level, shaping the Q2 roadmap across four product teams</li>
+        </ul>
+        <p><strong>Design:</strong></p>
+        <ul>
+          <li>Comprehensive journey map covering 5 stages, 6 specialized measurement flows, and cross-product ownership boundaries</li>
+          <li>Composable design system patterns that scale across measurement types without redesign</li>
+          <li>Design debt tracker giving leadership visibility into quality trade-offs</li>
+        </ul>
+        <p><strong>Business:</strong></p>
+        <ul>
+          <li>Research-backed MWP scope replaced assumption-driven planning</li>
+          <li>SMB strategy grounded in validated user needs — not just a hardware-to-web migration</li>
+          <li>Product positioned to convert nearly 14,000 daily mobile users into paying web subscribers</li>
+          <li>+20% user retention after the redesigned experience shipped</li>
+        </ul>
+      </div>
+      <div class="case-media">
+        <video src="../assets/video/sc-video-5.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <section class="case-section wrapper">
+      <h2>The moral of the story</h2>
+      <div class="prose">
+        <p>Every dysfunction I inherited became a system I built. No shared flows — I mapped them. No alignment framework — I created one. No design critique — I started it. No design debt visibility — I built the tracker.</p>
+        <p>The biggest lesson: business fluency is the multiplier. When I stopped framing recommendations as design improvements and started framing them as licensing conversion risk, support cost reduction, and customer acquisition strategy — leadership stopped asking "should we do this?" and started asking "how fast can we ship it?"</p>
+        <p>The ruins became the foundation.</p>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <div class="wrapper">
+        <div class="section-head">
+          <h2>Next Project</h2>
+        </div>
+        <a class="project-card" href="../foodsafety/">
+          <div class="card-text">
+            <h3>Food safety mobile app</h3>
+            <div>
+              <p class="card-desc">Redesigned an application used across 45 countries—contributing to 2 new enterprise wins and 100% user retention during the transition.</p>
+              <p class="card-tag">Product Design / IoT / B2B / Mobile</p>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="../assets/images/cover-foodsafety.png" alt="Food safety app on a control unit and phone with data logger details" loading="lazy">
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-marquee marquee" aria-label="Let's work together">
+      <div class="marquee-track"><span>Let's work together</span></div>
+      <div class="marquee-track" aria-hidden="true"><span>Let's work together</span></div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-social">
+        <a href="https://www.instagram.com/paulina_ux_space/" target="_blank" rel="noopener">Instagram&nbsp;&nbsp;↑</a>
+        <a href="https://www.threads.com/@paulina_ux_space" target="_blank" rel="noopener">Threads&nbsp;&nbsp;↑</a>
+        <a href="https://www.linkedin.com/in/paulina-szatanik-wierzynski" target="_blank" rel="noopener">LinkedIn&nbsp;&nbsp;↑</a>
+      </div>
+      <p class="footer-note">Let me know if you need a product designer. I'd love to talk about the next big thing!</p>
+    </div>
+    <div class="footer-bottom">
+      <a href="mailto:paulina8szatanik@gmail.com?subject=👋">paulina8szatanik@gmail.com</a>
+      <p>© Crafted by Paulina with ☕️</p>
+      <a href="#hero">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
