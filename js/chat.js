@@ -2,7 +2,7 @@
    Answers recruiter questions about Paulina using the proxy in
    ai-assistant/worker.js. Set WORKER_URL after deploying the worker. */
 
-const WORKER_URL = ''; // e.g. 'https://portfolio-chat.yourname.workers.dev'
+const WORKER_URL = 'https://portfolio-chat.paulina8szatanik.workers.dev';
 
 const SUGGESTIONS = [
   'What has she shipped at Testo?',
