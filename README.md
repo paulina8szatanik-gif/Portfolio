@@ -47,3 +47,18 @@ deploy from `main` branch), Netlify, Vercel, or any web host.
 Note for the contact form: the first submission from the live site sends a
 one-time confirmation email to paulina8szatanik@gmail.com (formsubmit.co).
 Confirm it once and the form is active.
+
+## AI assistant (chat widget)
+
+The floating chat bubble answers recruiter questions about Paulina.
+It has two halves:
+
+- `js/chat.js` — the widget on the site. `WORKER_URL` at the top must point
+  to the deployed Cloudflare Worker.
+- `ai-assistant/worker.js` — the proxy that holds the Anthropic API key.
+  Deployment instructions are in the comment at the top of that file.
+  To change what the assistant knows, edit the `KNOWLEDGE` text in it and
+  re-paste the file into the Cloudflare dashboard editor.
+
+The API key lives ONLY in Cloudflare (Settings → Variables → Secret named
+`ANTHROPIC_API_KEY`) — never commit it to this repository.
