@@ -1,7 +1,6 @@
 /* Small enhancements shared by all pages:
    1. Live Berlin clock in the navigation
    2. Halftone dot spiral in the hero (homepage only)
-   3. Staggered word reveal for elements marked with data-stagger
 */
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -73,31 +72,3 @@ if (spiral) {
   }
 }
 
-/* --- 3. Staggered character reveal (like the original Framer text effect) --- */
-
-document.querySelectorAll('[data-stagger]').forEach((el) => {
-  if (reducedMotion) return;
-  const words = el.textContent.trim().split(/\s+/);
-  el.textContent = '';
-  let charIndex = 0;
-  words.forEach((word) => {
-    // Wrap each word so lines still break between words, then animate
-    // every character inside with a small stagger.
-    const wordSpan = document.createElement('span');
-    wordSpan.style.cssText = 'display:inline-block;white-space:pre;';
-    for (const char of word) {
-      const charSpan = document.createElement('span');
-      charSpan.textContent = char;
-      charSpan.style.cssText = `display:inline-block;opacity:0;transform:translateY(0.7em);animation:stagger-in 0.6s ${0.4 + charIndex * 0.012}s cubic-bezier(0.2,0.65,0.3,1) forwards;`;
-      wordSpan.appendChild(charSpan);
-      charIndex++;
-    }
-    el.appendChild(wordSpan);
-    el.appendChild(document.createTextNode(' '));
-  });
-});
-
-// Keyframes for the word reveal (injected so the CSS file stays clean)
-const style = document.createElement('style');
-style.textContent = '@keyframes stagger-in { to { opacity: 1; transform: translateY(0); } }';
-document.head.appendChild(style);
